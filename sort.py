@@ -1,4 +1,8 @@
 def sort_list(lst):
+    return lst
+
+"""
+def sort_list(lst):
     # check if list is empty
     # return list if true
     if not lst:
@@ -20,3 +24,4 @@ def sort_list(lst):
             j += 1
         i += 1
     return lst
+"""

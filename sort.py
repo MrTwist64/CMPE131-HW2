@@ -1,6 +1,15 @@
 def sort_list(lst):
+    # check if list is empty
+    # return list if true
     if not lst:
         return lst
+    # check if list is all same type
+    # return unsorted list if not true
+    lstType = type(lst[0])
+    for x in lst:
+        if lstType != type(x):
+            return lst
+    # perform BubbleSort
     n = len(lst)
     i = 0
     while i < n:

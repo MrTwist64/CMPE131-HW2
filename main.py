@@ -1,7 +1,9 @@
 from sort import sort_list
+import timeit
 
 def main():
-    test_p1()
+    #test_p1()
+    test_p3()
 
 def test_p1():
     print("----- Problem 1 -----")
@@ -11,9 +13,18 @@ def test_p1():
     print(sort_list([1]))
     print(sort_list(['A', 'E', 'B', 'G', 'H']))
     print(sort_list(['a', 4, 'c', 2]))
-    lst = [5, 4, 3, 2, 1, 0]
-    print(sort_list(lst))
+    print(sort_list([5, 4, 3, 2, 1, 0]))
     print("---------------------")
+
+def test_p3():
+    p3_sort_list()
+
+@timeit.calculate_time
+def p3_sort_list():
+    lst = []
+    for j in range(5000, 0, -1):
+        lst.append(j)
+    sort_list(lst)
 
 if __name__ == '__main__':
     main()

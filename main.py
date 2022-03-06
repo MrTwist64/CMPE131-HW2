@@ -1,9 +1,11 @@
 from sort import sort_list
 import timeit
+import tracker
 
 def main():
     #test_p1()
-    test_p3()
+    #test_p3()
+    test_p5()
 
 def test_p1():
     print("----- Problem 1 -----")
@@ -19,12 +21,22 @@ def test_p1():
 def test_p3():
     p3_sort_list()
 
-@timeit.calculate_time
+@timeit.timeit
 def p3_sort_list():
     lst = []
     for j in range(5000, 0, -1):
         lst.append(j)
     sort_list(lst)
+
+def test_p5():
+    print(hello.counter)
+    for i in range(5):
+        hello(i)
+        print(hello.counter)
+
+@tracker.func_counter
+def hello(name):
+    print(f"Hello {name}!")
 
 if __name__ == '__main__':
     main()

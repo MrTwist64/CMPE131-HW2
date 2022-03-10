@@ -31,6 +31,7 @@ def main():
     # Sort the list by count
     word_list.sort(key = lambda x: x[1], reverse = True)
 
+    print() # Added to make autograder work
     # Select and print top 5 words
     for i in range(5):
         print(f"{word_list[i][0]}: {word_list[i][1]}")

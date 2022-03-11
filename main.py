@@ -21,7 +21,7 @@ def test_p1():
 def test_p3():
     p3_sort_list()
 
-@timeit.timeit
+@timeit.calculate_time
 def p3_sort_list():
     lst = []
     for j in range(5000, 0, -1):
